@@ -21,9 +21,13 @@ class BoringView(TemplateView):
             'kwargs': self.kwargs
         }
 
+    # I've seen this in a project
+    def post(self, request, *args, **kwargs):
+        pass
+
 
 class JsonView(View):
-    def post(self, request):
+    def post(self, request, *args, **kwargs):
         # do something with objects but don't use
         # self or request
         return JsonResponse({'rc': 0, 'response': 'ok'})
