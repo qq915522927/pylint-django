@@ -27,7 +27,7 @@ class BoringView(TemplateView):
 
 
 class JsonView(View):
-    def post(self, request, *args, **kwargs):
+    def post(self, request, *args):
         # do something with objects but don't use
         # self or request
         return JsonResponse({'rc': 0, 'response': 'ok'})
